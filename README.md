@@ -24,7 +24,7 @@ Please goto the [COVID-19 vaccines at H-E-B Pharmacy Scheduler](https://vaccine.
 ## What it does
 
 1. `hev` processes the vaccine schedule API on a regular cadence (every 5 seconds by default).
-1. It will check the availability posted for ALL H-EB locations in the list to determine if there are shots available.
+1. It will check the availability posted for ALL H-E-B locations in the list to determine if there are shots available.
 1. It will then determine if the location is within a radius of miles based on your lat/long (user provided)
 1. If the available shot is within your radius, it will alert you and open a browser directly to the appointment sign up page.
 
