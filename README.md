@@ -4,6 +4,15 @@
 
 Please see [the docs for details on the commands.](./docs/hev.md)
 
+- [Docs](./docs/hev.md)
+- [About](#about)
+- [What it does](#what-it-does)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How do I find my latitude and longitude?](#how-do-i-find-my-latitude-and-longitude)
+- [Important Links](#important-links)
+- [License](#license)
+
 ## About
 
 This tool is intended to help those who qualify ([SEE RULES](https://vaccine.heb.com/scheduler)) for the COVIC-19 vaccine at H-E-B find an appointment.
@@ -19,7 +28,7 @@ Please goto the [COVID-19 vaccines at H-E-B Pharmacy Secheduler](https://vaccine
 
 > PLEASE NOTE: Slots are taken up FAST. Once the browser opens, it is very possible that the slot has been taken. Keep trying. Stay persistent. You will get one.
 
-## Install
+## Installation
 
 ```
 $ curl https://i.jpillora.com/clok/hev-cli! | bash
@@ -28,11 +37,13 @@ $ curl https://i.jpillora.com/clok/hev-cli! | bash
 ## Usage
 
 Run the tool with a 50 mile radius and a 2 second refresh rate. (The lat/long here is fake)
+
 ```
 $ hev watch --miles 50 --delay 2 --lat 12.345 --long -12.345
 ```
 
 Help output
+
 ```
 $ hev watch --help
 NAME:
@@ -55,3 +66,21 @@ OPTIONS:
 Goto [https://map.google.com](https://map.google.com) and enter your address. Right-Click on the Pin marker that shows up. Click the first line, the lat/long. That will copy the value.
 
 ![image](https://user-images.githubusercontent.com/1429775/111990513-539ced00-8ae1-11eb-9bcd-c3999933adc1.png)
+
+## Important Links
+
+- [CDC COVID-19 Vaccine Resource Center](https://www.cdc.gov/vaccines/covid-19/index.html)
+- [H-E-B Vaccine Scheduler](https://vaccine.heb.com/scheduler)
+- [DSHS Texas Guidelines](https://www.dshs.texas.gov/coronavirus/)
+
+## License
+
+[MIT @ clok](LICENSE)
+
+> THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+> IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+> FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+> AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+> LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+> OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+> SOFTWARE.
