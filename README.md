@@ -1,1 +1,55 @@
-# hev
+# hev-cli
+
+> H-E-V: Here Everyone's Vaccinated
+
+## About
+
+This tool is intended to help those who qualify ([SEE RULES](https://vaccine.heb.com/scheduler)) for the COVIC-19 vaccine at H-E-B find an appointment.
+
+Please goto the [COVID-19 vaccines at H-E-B Pharmacy Secheduler](https://vaccine.heb.com/scheduler) to read up on the qualification rules.
+
+## What it does
+
+1. `hev` processes the vaccine schedule API on a regular cadence (every 5 seconds by default).
+1. It will check the availability posted for ALL H-EB locations in the list to determine if there are shots available.
+1. It will then determine if the location is within a radius of miles based on your lat/long (user provided)
+1. If the available shot is within your radius, it will alert you and open a browser directly to the appointment sign up page.
+
+> PLEASE NOTE: Slots are taken up FAST. Once the browser opens, it is very possible that the slot has been taken. Keep trying. Stay persistent. You will get one.
+
+## Install
+
+```
+$ curl https://i.jpillora.com/clok/hev-cli! | bash
+```
+
+## Usage
+
+Run the tool with a 50 mile radius and a 2 second refresh rate. (The lat/long here is fake)
+```
+$ hev watch --miles 50 --delay 2 --lat 12.345 --long -12.345
+```
+
+Help output
+```
+$ hev watch --help
+NAME:
+   hev watch - start the watcher
+
+USAGE:
+   hev watch [command options] [arguments...]
+
+OPTIONS:
+   --miles value, -m value         radius in miles from location (default: 30)
+   --delay value, -d value         number of seconds to wait between polling (default: 5)
+   --latitude value, --lat value   origin latitude (default: 30.345122515031083)
+   --longitude value, --lon value  origin longitude (default: -97.96755574412511)
+   --suppress-ttl value            number of minutes to suppress alerting link to previously seen open slots (default: 5)
+   --help, -h                      show help (default: false)
+```
+
+## How do I find my latitude and longitude?
+
+Goto [https://map.google.com](https://map.google.com) and enter your address. Right-Click on the Pin marker that shows up. Click the first line, the lat/long. That will copy the value.
+
+![image](https://user-images.githubusercontent.com/1429775/111990513-539ced00-8ae1-11eb-9bcd-c3999933adc1.png)
