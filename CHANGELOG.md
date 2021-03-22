@@ -2,6 +2,22 @@
 ## [Unreleased]
 
 
+<a name="v0.2.0"></a>
+## [v0.2.0] - 2021-03-22
+### Bug Fixes
+- typos and grammar changes
+- update installation command
+
+### Chores
+- update windows installation notes
+- update readme
+- updated readme
+- **docs:** updating docs for version v0.2.0
+
+### Features
+- added lat and long for 3 sites that are not stores
+
+
 <a name="v0.1.0"></a>
 ## v0.1.0 - 2021-03-22
 ### Chores
@@ -10,7 +26,9 @@
 - update readme
 
 ### Features
+- **release:** v0.1.0
 - **watch:** initial rollout of watch command
 
 
-[Unreleased]: https://github.com/clok/hev-cli/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/clok/hev-cli/compare/v0.2.0...HEAD
+[v0.2.0]: https://github.com/clok/hev-cli/compare/v0.1.0...v0.2.0
