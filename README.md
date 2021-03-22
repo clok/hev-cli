@@ -31,7 +31,7 @@ Please goto the [COVID-19 vaccines at H-E-B Pharmacy Secheduler](https://vaccine
 ## Installation
 
 ```
-$ curl https://i.jpillora.com/clok/hev-cli! | bash
+$ curl https://i.jpillora.com/clok/hev-cli! | sed s/PROG=\"hev-cli\"/PROG=\"hev\"/ | bash
 ```
 
 ## Usage
