@@ -15,9 +15,9 @@ Please see [the docs for details on the commands.](./docs/hev.md)
 
 ## About
 
-This tool is intended to help those who qualify ([SEE RULES](https://vaccine.heb.com/scheduler)) for the COVIC-19 vaccine at H-E-B find an appointment.
+This tool is intended to help those who qualify ([SEE RULES](https://vaccine.heb.com/scheduler)) for the COVID-19 vaccine at H-E-B find an appointment.
 
-Please goto the [COVID-19 vaccines at H-E-B Pharmacy Secheduler](https://vaccine.heb.com/scheduler) to read up on the qualification rules.
+Please goto the [COVID-19 vaccines at H-E-B Pharmacy Scheduler](https://vaccine.heb.com/scheduler) to read up on the qualification rules.
 
 ## What it does
 
@@ -36,7 +36,7 @@ $ curl https://i.jpillora.com/clok/hev-cli! | sed s/PROG=\"hev-cli\"/PROG=\"hev\
 
 ## Usage
 
-Run the tool with a 50 mile radius and a 2 second refresh rate. (The lat/long here is fake)
+Run the tool with a 50-mile radius, and a 2-second refresh rate. (The lat/long here is fake)
 
 ```
 $ hev watch --miles 50 --delay 2 --lat 12.345 --long -12.345
