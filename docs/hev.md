@@ -1,6 +1,6 @@
 % hev 8
 # NAME
-hev - scan H-E-B vaccine availabliby and open a browser when there is one available within a radius of miles
+hev - scan H-E-B vaccine availability and open a browser when there is one available within a radius of miles
 # SYNOPSIS
 hev
 
