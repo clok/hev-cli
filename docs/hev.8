@@ -1,0 +1,76 @@
+.nh
+.TH hev 8
+
+.SH NAME
+.PP
+hev \- scan H\-E\-B vaccine availabliby and open a browser when there is one available within a radius of miles
+
+
+.SH SYNOPSIS
+.PP
+hev
+
+
+.SH COMMAND TREE
+.RS
+.IP \(bu 2
+watch, w
+\[la]#watch-w\[ra]
+.IP \(bu 2
+install\-manpage
+\[la]#install-manpage\[ra]
+.IP \(bu 2
+version, v
+\[la]#version-v\[ra]
+
+.RE
+
+.PP
+\fBUsage\fP:
+
+.PP
+.RS
+
+.nf
+hev [GLOBAL OPTIONS] command [COMMAND OPTIONS] [ARGUMENTS...]
+
+.fi
+.RE
+
+
+.SH COMMANDS
+.SH watch, w
+.PP
+start the watcher
+
+.PP
+\fB\-\-delay, \-d\fP="": number of seconds to wait between polling (default: 5)
+
+.PP
+\fB\-\-latitude, \-\-lat\fP="": origin latitude (default: 30.345123)
+
+.PP
+\fB\-\-longitude, \-\-lon\fP="": origin longitude (default: \-97.967556)
+
+.PP
+\fB\-\-miles, \-m\fP="": radius in miles from location (default: 30)
+
+.PP
+\fB\-\-suppress\-ttl\fP="": number of minutes to suppress alerting link to previously seen open slots (default: 5)
+
+.SH install\-manpage
+.PP
+Generate and install man page
+
+.PP
+.RS
+
+.PP
+NOTE: Windows is not supported
+
+.RE
+
+.SH version, v
+.PP
+Print version info
+
