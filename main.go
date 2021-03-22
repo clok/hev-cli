@@ -21,6 +21,20 @@ var (
 	URL     = "https://heb-ecom-covid-vaccine.hebdigital-prd.com/vaccine_locations.json"
 	k       = kemba.New("hev")
 	client  = &http.Client{Timeout: 10 * time.Second}
+	special = map[string]location{
+		"COVID Vaccination Clinic at Orange Grove ISD": {
+			Latitude:  27.95631880379483,
+			Longitude: -97.94116047299124,
+		},
+		"First United Methodist Church": {
+			Latitude:  30.04516797336692,
+			Longitude: -99.15011125112252,
+		},
+		"RX04-COMPOUND FRATT & RITTIMAN": {
+			Latitude:  29.48710649868841,
+			Longitude: -98.3921795306433,
+		},
+	}
 )
 
 func getJSON(url string, target interface{}) error {
@@ -87,7 +101,7 @@ func main() {
 	app := cli.NewApp()
 	app.Name = "hev"
 	app.Version = version
-	app.Usage = "scan H-E-B vaccine availabliby and open a browser when there is one available within a radius of miles"
+	app.Usage = "scan H-E-B vaccine availability and open a browser when there is one available within a radius of miles"
 	app.Commands = []*cli.Command{
 		{
 			Name:    "watch",
@@ -161,8 +175,20 @@ func main() {
 						for _, loc := range locations {
 							_, ok := MCache.Get(loc.Name)
 
-							destination := haversine.Coord{Lat: loc.Latitude, Lon: loc.Longitude}
-							mi, _ := haversine.Distance(origin, destination)
+							var destination haversine.Coord
+							var mi float64
+
+							if loc.Latitude != 0 {
+								destination = haversine.Coord{Lat: loc.Latitude, Lon: loc.Longitude}
+							} else {
+								if tmp, ok := special[loc.Name]; ok {
+									destination = haversine.Coord{Lat: tmp.Latitude, Lon: tmp.Longitude}
+								} else {
+									fmt.Printf("No lat/long found for %s", loc.Name)
+									break
+								}
+							}
+							mi, _ = haversine.Distance(origin, destination)
 							if mi <= float64(radius) {
 								fmt.Print("\a")
 								fmt.Printf("FOUND %s [%d %s] : %.0f miles", loc.Name, loc.OpenAppointmentSlots, loc.SlotDetails[0].Manufacturer, mi)
