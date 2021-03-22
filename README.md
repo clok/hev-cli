@@ -8,6 +8,8 @@ Please see [the docs for details on the commands.](./docs/hev.md)
 - [About](#about)
 - [What it does](#what-it-does)
 - [Installation](#installation)
+  - [Linux & Mac OS](#linux--mac-os)
+  - [Windows](#windows)
 - [Usage](#usage)
 - [How do I find my latitude and longitude?](#how-do-i-find-my-latitude-and-longitude)
 - [Important Links](#important-links)
@@ -30,9 +32,17 @@ Please goto the [COVID-19 vaccines at H-E-B Pharmacy Scheduler](https://vaccine.
 
 ## Installation
 
+### Linux & Mac OS
 ```
 $ curl https://i.jpillora.com/clok/hev-cli! | sed s/PROG=\"hev-cli\"/PROG=\"hev\"/ | bash
 ```
+
+### Windows
+
+1. Goto [Releases](https://github.com/clok/hev-cli/releases)
+1. Download `hev_<version>_windows_amd64.zip`
+1. Unzip (extract all)
+1. Run the app in a Terminal
 
 ## Usage
 
