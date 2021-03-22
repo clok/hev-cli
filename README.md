@@ -2,6 +2,8 @@
 
 > H-E-V: Here Everyone's Vaccinated
 
+Please see [the docs for details on the commands.](./docs/hev.md)
+
 ## About
 
 This tool is intended to help those who qualify ([SEE RULES](https://vaccine.heb.com/scheduler)) for the COVIC-19 vaccine at H-E-B find an appointment.
