@@ -1,6 +1,6 @@
 NAME=hev
 
-VERSION=$$(git describe --tags --always)
+VERSION?=$$(git describe --tags --always)
 SHORT_VERSION=$$(git describe --tags --always | awk -F '-' '{print $$1}')
 
 LDFLAGS=-ldflags=all="-X main.version=${SHORT_VERSION}"
