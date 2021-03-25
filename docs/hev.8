@@ -17,6 +17,12 @@ hev
 watch, w
 \[la]#watch-w\[ra]
 .IP \(bu 2
+publish
+\[la]#publish\[ra]
+.IP \(bu 2
+websocket
+\[la]#websocket\[ra]
+.IP \(bu 2
 install\-manpage
 \[la]#install-manpage\[ra]
 .IP \(bu 2
@@ -57,6 +63,42 @@ start the watcher
 
 .PP
 \fB\-\-suppress\-ttl\fP="": number of minutes to suppress alerting link to previously seen open slots (default: 5)
+
+.SH publish
+.PP
+start the publisher
+
+.PP
+.RS
+
+.nf
+Poll the HEB Vaccine location API, pushing locations with vaccines available to a REDIS pub/sub channel
+
+NOTE: The REDIS\_HOST\_URL environment variable is require. Example: redis://redis.yolo.co:6379
+
+.fi
+.RE
+
+.PP
+\fB\-\-delay, \-d\fP="": number of seconds to wait between polling (default: 5)
+
+.SH websocket
+.PP
+start the websocket server
+
+.PP
+.RS
+
+.PP
+Poll the HEB Vaccine location API, pushing locations with vaccines available to a websocket
+
+.RE
+
+.PP
+\fB\-\-addr\fP="": host address to bind to (default: localhost:8337)
+
+.PP
+\fB\-\-delay, \-d\fP="": number of seconds to wait between polling (default: 5)
 
 .SH install\-manpage
 .PP
