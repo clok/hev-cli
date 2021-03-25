@@ -33,6 +33,7 @@ func main() {
 	app.Commands = []*cli.Command{
 		commands.CommandWatch,
 		commands.CommandPublish,
+		commands.CommandWebsocket,
 		im,
 		{
 			Name:    "version",
