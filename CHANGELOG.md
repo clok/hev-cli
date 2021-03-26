@@ -2,6 +2,15 @@
 ## [Unreleased]
 
 
+<a name="v0.3.1"></a>
+## [v0.3.1] - 2021-03-26
+### Chores
+- fix linting issues
+- remove dead code
+- add download links
+- update README
+
+
 <a name="v0.3.0"></a>
 ## [v0.3.0] - 2021-03-25
 ### Chores
@@ -10,6 +19,7 @@
 
 ### Features
 - **publish:** add publish command and server functionality
+- **release:** v0.3.0
 - **websocket:** added command to server data to a websocket
 
 
@@ -42,6 +52,7 @@
 - **watch:** initial rollout of watch command
 
 
-[Unreleased]: https://github.com/clok/hev-cli/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/clok/hev-cli/compare/v0.3.1...HEAD
+[v0.3.1]: https://github.com/clok/hev-cli/compare/v0.3.0...v0.3.1
 [v0.3.0]: https://github.com/clok/hev-cli/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/clok/hev-cli/compare/v0.1.0...v0.2.0
