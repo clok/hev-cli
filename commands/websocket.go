@@ -11,19 +11,6 @@ import (
 	"time"
 )
 
-func serveHome(w http.ResponseWriter, r *http.Request) {
-	log.Println(r.URL)
-	if r.URL.Path != "/" {
-		http.Error(w, "Not found", http.StatusNotFound)
-		return
-	}
-	if r.Method != "GET" {
-		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
-		return
-	}
-	http.ServeFile(w, r, "commands/home.html")
-}
-
 func scrapeHEB(delay int, hub *helpers.Hub) {
 	kl := k.Extend("scrapeHEB")
 	for {
@@ -98,8 +85,7 @@ Poll the HEB Vaccine location API, pushing locations with vaccines available to 
 
 			go scrapeHEB(delay, hub)
 
-			http.HandleFunc("/", serveHome)
-			http.HandleFunc("/ws", func(w http.ResponseWriter, r *http.Request) {
+			http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 				helpers.ServeWs(hub, w, r)
 			})
 			err := http.ListenAndServe(c.String("addr"), nil)
