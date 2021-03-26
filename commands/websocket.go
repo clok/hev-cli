@@ -3,12 +3,13 @@ package commands
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/clok/hev-cli/helpers"
-	"github.com/clok/hev-cli/types"
-	"github.com/urfave/cli/v2"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/clok/hev-cli/helpers"
+	"github.com/clok/hev-cli/types"
+	"github.com/urfave/cli/v2"
 )
 
 func scrapeHEB(delay int, hub *helpers.Hub) {
@@ -66,10 +67,10 @@ Poll the HEB Vaccine location API, pushing locations with vaccines available to 
 				Value:   5,
 			},
 			&cli.StringFlag{
-				Name:        "addr",
+				Name:    "addr",
 				EnvVars: []string{"WEBSOCKET_HOST"},
-				Value: "localhost:8337",
-				Usage: "host address to bind to",
+				Value:   "localhost:8337",
+				Usage:   "host address to bind to",
 			},
 		},
 		Action: func(c *cli.Context) error {
