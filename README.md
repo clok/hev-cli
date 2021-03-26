@@ -55,20 +55,26 @@ $ hev watch --miles 50 --delay 2 --lat 12.345 --long -12.345
 Help output
 
 ```
-$ hev watch --help
 NAME:
-   hev watch - start the watcher
+   hev - scan H-E-B vaccine availability and open a browser when there is one available within a radius of miles
 
 USAGE:
-   hev watch [command options] [arguments...]
+   hev [global options] command [command options] [arguments...]
 
-OPTIONS:
-   --miles value, -m value         radius in miles from location (default: 30)
-   --delay value, -d value         number of seconds to wait between polling (default: 5)
-   --latitude value, --lat value   origin latitude (default: 30.345122515031083)
-   --longitude value, --lon value  origin longitude (default: -97.96755574412511)
-   --suppress-ttl value            number of minutes to suppress alerting link to previously seen open slots (default: 5)
-   --help, -h                      show help (default: false)
+VERSION:
+   v0.3.0
+
+COMMANDS:
+   watch, w         start the watcher
+   publish          start the publisher
+   websocket        start the websocket server
+   install-manpage  Generate and install man page
+   version, v       Print version info
+   help, h          Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --help, -h     show help (default: false)
+   --version, -v  print the version (default: false)
 ```
 
 ## How do I find my latitude and longitude?
