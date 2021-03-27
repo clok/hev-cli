@@ -21,28 +21,27 @@ func scrapeHEB(delay int, hub *helpers.Hub) {
 		}
 
 		if len(locations) > 0 {
-			// publish
-			kl.Println("found")
-			for i, location := range locations {
-				go func(l *types.Location, c int) {
-					kl.Printf("%d\tpublishing: %s", c, l.Name)
-					if l.Latitude == 0 {
-						if tmp, ok := special[l.Name]; ok {
-							l.Latitude = tmp.Latitude
-							l.Longitude = tmp.Longitude
-						} else {
-							kl.Printf("\tNo lat/long found for %s", l.Name)
-						}
+			packet := make([]*types.Location, len(locations))
+			for i, l := range locations {
+				kl.Printf("%d\tpacking: %s", i, l.Name)
+				if l.Latitude == 0 {
+					if tmp, ok := special[l.Name]; ok {
+						l.Latitude = tmp.Latitude
+						l.Longitude = tmp.Longitude
+					} else {
+						kl.Printf("\tNo lat/long found for %s", l.Name)
 					}
-
-					loc, err := json.Marshal(l)
-					if err != nil {
-						log.Fatal(err)
-						return
-					}
-					hub.Broadcast(loc)
-				}(location, i)
+				}
+				packet[i] = l
 			}
+
+			data, err := json.Marshal(packet)
+			kl.Printf("%d byte packet includes %d locations", len(data), len(packet))
+			if err != nil {
+				log.Fatal(err)
+				return
+			}
+			hub.Broadcast(data)
 		} else {
 			kl.Println("No open slots found")
 		}
