@@ -27,6 +27,10 @@ var (
 			Latitude:  29.48710649868841,
 			Longitude: -98.3921795306433,
 		},
+		"COVID Vaccination Clinic at Aransas Pass Civic Center": {
+			Latitude: 27.91092331218623,
+			Longitude: -97.15047760843393,
+		},
 	}
 )
 
