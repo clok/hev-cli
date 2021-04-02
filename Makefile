@@ -40,7 +40,7 @@ lint: ## Run linters
 ##@ Build
 
 .PHONY: build
-build: clean ## Build gwsm
+build: clean ## Build hev-cli (hev)
 	@ $(MAKE) --no-print-directory log-$@
 	@mkdir -p bin/
 	CGO_ENABLED=0 $(GOHOST) build -ldflags=$(LDFLAGS) -o bin/$(NAME) ./main.go
