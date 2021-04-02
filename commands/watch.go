@@ -28,8 +28,12 @@ var (
 			Longitude: -98.3921795306433,
 		},
 		"COVID Vaccination Clinic at Aransas Pass Civic Center": {
-			Latitude: 27.91092331218623,
+			Latitude:  27.91092331218623,
 			Longitude: -97.15047760843393,
+		},
+		"H-E-B Hosted J&J COVID Vaccination Clinic at Waco Convention Center": {
+			Latitude:  31.559946188014,
+			Longitude: -97.12905183071285,
 		},
 	}
 )
