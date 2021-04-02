@@ -10,6 +10,7 @@ Please see [the docs for details on the commands.](./docs/hev.md)
 - [Installation](#installation)
   - [Linux & Mac OS](#linux--mac-os)
   - [Windows](#windows)
+  - [docker](#docker)
 - [Usage](#usage)
 - [How do I find my latitude and longitude?](#how-do-i-find-my-latitude-and-longitude)
 - [Important Links](#important-links)
@@ -43,6 +44,20 @@ $ curl https://i.jpillora.com/clok/hev-cli! | sed s/PROG=\"hev-cli\"/PROG=\"hev\
 1. Download `hev_<version>_windows_amd64.zip`
 1. Unzip (extract all)
 1. Run the app in a Terminal
+
+### [docker](https://www.docker.com/)
+
+The compiled docker images are maintained on [GitHub Container Registry (ghcr.io)](https://github.com/users/clok/packages/container/package/hev-cli).
+We maintain the following tags:
+
+- `edge`: Image that is build from the current `HEAD` of the main line branch.
+- `latest`: Image that is built from the [latest released version](https://github.com/clok/hev-cli/releases/releases)
+- `x.y.z` (versions): Images that are build from the tagged versions within Github.
+
+```bash
+docker pull ghcr.io/clok/hev-cli
+docker run -v "$PWD":/workdir ghcr.io/clok/hev-cli --version
+```
 
 ## Usage
 
