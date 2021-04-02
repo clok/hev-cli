@@ -2,6 +2,19 @@
 ## [Unreleased]
 
 
+<a name="v0.4.0"></a>
+## [v0.4.0] - 2021-04-02
+### Ci
+- **docker:** add goreleaser docker GitHub Container Registry support
+
+### Code Refactoring
+- change structure of packet for websocket
+
+### Features
+- updates non-HEB locations
+- add pop-up site
+
+
 <a name="v0.3.1"></a>
 ## [v0.3.1] - 2021-03-26
 ### Chores
@@ -9,6 +22,9 @@
 - remove dead code
 - add download links
 - update README
+
+### Features
+- **release:** v0.3.1
 
 
 <a name="v0.3.0"></a>
@@ -52,7 +68,8 @@
 - **watch:** initial rollout of watch command
 
 
-[Unreleased]: https://github.com/clok/hev-cli/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/clok/hev-cli/compare/v0.4.0...HEAD
+[v0.4.0]: https://github.com/clok/hev-cli/compare/v0.3.1...v0.4.0
 [v0.3.1]: https://github.com/clok/hev-cli/compare/v0.3.0...v0.3.1
 [v0.3.0]: https://github.com/clok/hev-cli/compare/v0.2.0...v0.3.0
 [v0.2.0]: https://github.com/clok/hev-cli/compare/v0.1.0...v0.2.0
