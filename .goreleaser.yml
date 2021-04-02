@@ -37,3 +37,10 @@ changelog:
 
 snapshot:
   name_template: "{{ .Tag }}-next"
+
+dockers:
+  - ids:
+      - hev
+    image_templates:
+      - "ghcr.io/clok/hev-cli:{{ .RawVersion }}"
+      - "ghcr.io/clok/hev-cli:latest"
