@@ -104,7 +104,7 @@ var (
 							if tmp, ok := special[loc.Name]; ok {
 								destination = haversine.Coord{Lat: tmp.Latitude, Lon: tmp.Longitude}
 							} else {
-								fmt.Printf("No lat/long found for %s", loc.Name)
+								fmt.Printf("\tNo lat/long found for %s\n", loc.Name)
 								break
 							}
 						}
