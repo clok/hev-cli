@@ -2,6 +2,12 @@
 ## [Unreleased]
 
 
+<a name="v0.5.0"></a>
+## [v0.5.0] - 2021-04-06
+### Bug Fixes
+- **watcher:** continue loop instead of break on missing location
+
+
 <a name="v0.4.1"></a>
 ## [v0.4.1] - 2021-04-02
 ### Bug Fixes
@@ -10,6 +16,7 @@
 ### Chores
 - fix typo in makefile
 - update readme
+- **release:** v0.4.1
 
 
 <a name="v0.4.0"></a>
@@ -81,7 +88,8 @@
 - **watch:** initial rollout of watch command
 
 
-[Unreleased]: https://github.com/clok/hev-cli/compare/v0.4.1...HEAD
+[Unreleased]: https://github.com/clok/hev-cli/compare/v0.5.0...HEAD
+[v0.5.0]: https://github.com/clok/hev-cli/compare/v0.4.1...v0.5.0
 [v0.4.1]: https://github.com/clok/hev-cli/compare/v0.4.0...v0.4.1
 [v0.4.0]: https://github.com/clok/hev-cli/compare/v0.3.1...v0.4.0
 [v0.3.1]: https://github.com/clok/hev-cli/compare/v0.3.0...v0.3.1
