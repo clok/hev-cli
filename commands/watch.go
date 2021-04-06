@@ -35,6 +35,14 @@ var (
 			Latitude:  31.559946188014,
 			Longitude: -97.12905183071285,
 		},
+		"H-E-B Hosted COVID Vaccination Clinic at Portland Community Civic Center": {
+			Latitude:  27.897263955764938,
+			Longitude: -97.31413332271853,
+		},
+		"H-E-B Hosted COVID Vaccination Clinic at Donna High School GYM": {
+			Latitude:  26.175085453723508,
+			Longitude: -98.03650696026216,
+		},
 	}
 )
 
@@ -105,7 +113,7 @@ var (
 								destination = haversine.Coord{Lat: tmp.Latitude, Lon: tmp.Longitude}
 							} else {
 								fmt.Printf("\tNo lat/long found for %s\n", loc.Name)
-								break
+								continue
 							}
 						}
 						mi, _ = haversine.Distance(origin, destination)
