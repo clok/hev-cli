@@ -1,25 +1,5 @@
 {
-    "semanticCommits": "enabled",
-    "prHourlyLimit": 5,
-    "reviewersFromCodeOwners": true,
-    "labels": [
-        "dependencies"
-    ],
-    "extends": [
-        "config:base",
-        "group:allNonMajor",
-    ],
-    "postUpdateOptions": ["gomodTidy"],
-    "major": {
-        "labels": [
-            "dependencies",
-            "major"
-        ]
-    },
-    "minor": {
-        "labels": [
-            "dependencies",
-            "minor"
-        ]
-    }
+  "extends": [
+    "github>clok/renovate-config"
+  ]
 }
