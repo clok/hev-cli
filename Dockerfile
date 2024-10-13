@@ -1,4 +1,4 @@
-FROM alpine:3.15.4
+FROM alpine:3.20.3
 
 COPY hev /usr/local/bin/hev
 RUN chmod +x /usr/local/bin/hev
