@@ -1,6 +1,6 @@
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
-github.com/OrlovEvgeny/go-mcache v0.0.0-20200121124330-1a8195b34f3a h1:Cf4CrDeyrIcuIiJZEZJAH5dapqQ6J3OmP/vHPbDjaFA=
-github.com/OrlovEvgeny/go-mcache v0.0.0-20200121124330-1a8195b34f3a/go.mod h1:ig6eVXkYn/9dz0Vm8UdLf+E0u1bE6kBSn3n2hqk6jas=
+github.com/OrlovEvgeny/go-mcache v0.0.0-20260128103710-6ad1c4823f1a h1:w9zJ/eEJN9/3xdFtkLWLFD7K7DYtATXGXnV4+qtNfeI=
+github.com/OrlovEvgeny/go-mcache v0.0.0-20260128103710-6ad1c4823f1a/go.mod h1:7/iSly/vHf9G8/bn0E18LVVLtDn/0HZ2VsPJzE8vK8Q=
 github.com/clok/cdocs v1.2.0 h1:sFhbBmTgV1rC8TjRSzBD7RIXP4fSnw/gTBPd5YuRBJM=
 github.com/clok/cdocs v1.2.0/go.mod h1:MHdLYRxv66KNophPTW4VJOkdGJhDhpSJ1ka6WuIbrJg=
 github.com/clok/kemba v1.1.1 h1:s1G0dd7NrScBuYcBHQNzPJ1u3q/herMuY9VGYFSleTA=
