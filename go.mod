@@ -7,7 +7,7 @@ require (
 	github.com/clok/cdocs v1.2.0
 	github.com/clok/kemba v1.1.1
 	github.com/gomodule/redigo v1.8.8
-	github.com/gorilla/websocket v1.5.0
+	github.com/gorilla/websocket v1.5.3
 	github.com/umahmood/haversine v0.0.0-20151105152445-808ab04add26
 	github.com/urfave/cli/v2 v2.4.0
 )
